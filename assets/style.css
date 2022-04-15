@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* Variables */
+:root{
+    --bg-color: #323232;
+    --color: #ff5b3e;
+    --lcolor: #ff8974;
+    --text-color: #fff;
+}
+
+/* GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    display: flex;
+    margin: 25px 10px 0 10px;
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    width: 10%;
+}
+
+/* Encryptor */
+
+#encryptor{
+    height: 100%;
+    width: 60%;
+}
+
+.title{
+    color: var(--color);
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.text-input{
+    height: 60%;
+}
+
+.text-input textarea{
+    background-color: transparent;
+    border: 1px solid ;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin: 1em 0;
+    padding: 1.5em 1em;
+    resize: none;
+    height: 85%;
+    width: 95%;
+}
+
+::placeholder{
+    color: var(--text-color);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+.buttons p{
+    font-size: 0.8em;
+}
+
+.buttons button{
+    margin: 1em 1em 0 0;
+}
+
+button{
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 1em 0em;
+    width: 13em;
+}
+
+button:active{
+    transform: scale(-1);
+}
+
+.btn-encrypt{
+    background-color: var(--color);
+    color: var(--text-color);
+}
+
+.btn-encrypt:hover{
+    background-color: var(--text-color);
+    color: var(--color);
+    transition: 1s all;
+}
+
+.btn-decrypt{
+    background-color: var(--text-color);
+    color: var(--color);
+}
+
+.btn-decrypt:hover{
+    background-color: var(--color);
+    color: var(--text-color);
+    transition: 1s all;
+}
+
+/* Text Output */
+
+#text-output{
+    background-color: #ff5b3e9c;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    height: 90%;
+    width: 25%;
+}
+
+#text-output input{
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* #text-output input::placeholder{
+    color: var(--bg-color);
+} */
+
+/* Footer */
+
+footer{
+    display: flex;
+    background-color: var(--lcolor);
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    gap: 50px;
+    height: 4em;
+    width: 100%;
+    text-align: center;
+}
