@@ -1,11 +1,71 @@
-// **Requisitos:**
-// - Deve funcionar apenas com letras minúsculas
-// - Não devem ser utilizados letras com acentos nem caracteres especiais
-// - Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
+// DEV JOICE GOMES | 2022
+// Text Encryptor/Decryptor 
 
-// As "chaves" de criptografia que utilizaremos são:
-// `A letra "e" é convertida para "enter"`
-// `A letra "i" é convertida para "imes"`
-// `A letra "a" é convertida para "ai"`
-// `A letra "o" é convertida para "ober"`
-// `A letra "u" é convertida para "ufat"`
+const input = document.getElementById('text-input');
+const output = document.getElementById('text-output');
+const encryptButton = document.getElementById('encrypt-btn');
+const decryptButton = document.getElementById('decrypt-btn');
+const noMsgImg = document.getElementById('no-msg-img');
+
+encryptButton.onclick = encryptText;
+decryptButton.onclick = decryptText;
+
+function encryptText() {
+    let text = input.value.toLowerCase();
+    let textArray = text.split('');
+    let result;
+
+    if (input.value === '') {
+        input.placeholder = 'Digite um texto primeiro!';
+    } else {
+        for (let i = 0; i < textArray.length; i++) {
+            if (textArray[i] === 'a') {
+                textArray[i] = 'ai';
+            } else if (textArray[i] === 'e') {
+                textArray[i] = 'enter';
+            } else if (textArray[i] === 'i') {
+                textArray[i] = 'imes';
+            } else if (textArray[i] === 'o') {
+                textArray[i] = 'ober';
+            } else if (textArray[i] === 'u') {
+                textArray[i] = 'ufat';
+            }
+        }
+        result = textArray.join('');
+        noMsgImg.style.display = 'none';
+        output.value = result;
+        createCopyButton();
+    }
+}
+
+function decryptText() {
+    let text = input.value.toLowerCase();
+    let result;
+
+    if (input.value === '') {
+        input.placeholder = 'Digite um texto primeiro!';
+    } else {
+        result = text.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+        noMsgImg.style.display = 'none';
+        output.value = result;
+        createCopyButton();
+    }
+}
+
+function createCopyButton() {
+    const outputContainer = document.querySelector('.text-output-container');
+    let hasCopyButton = outputContainer.contains(outputContainer.querySelector('button'));
+
+    if (!hasCopyButton) {
+        const copyButton = document.createElement('button');
+        copyButton.innerHTML = 'Copiar';
+        outputContainer.appendChild(copyButton);
+        copyButton.classList.add('light-btn');
+        copyButton.setAttribute('onclick', 'copyToClipboard()');
+    }
+}
+
+async function copyToClipboard(){
+    await navigator.clipboard.writeText(output.value);
+    alert('Texto copiado para a área de transferência.');
+}

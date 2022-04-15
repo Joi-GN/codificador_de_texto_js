@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" href="assets/" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
 
     <script defer src="assets/script.js"></script>
     <script defer src="https://kit.fontawesome.com/9555ff22ed.js" crossorigin="anonymous"></script>
@@ -18,38 +18,43 @@
 <body>
     <main>
         <div id="logo">
-            <img src="assets/logo1.png" alt="logo">
+            <i class="fa-solid fa-align-left"></i>
         </div>
         <div id="encryptor">
             <div>
                 <h1 class="title">Codificador de Texto</h1>
             </div>
-            <div class="text-input">
-                <textarea placeholder="Digite seu texto aqui"></textarea>
+            <div class="text-input-container">
+                <textarea id="text-input" placeholder="Digite seu texto aqui" autofocus></textarea>
             </div>
-            <div class="buttons">
+            <div class="buttons-container">
                 <p class="notice">
                     <i class="fa-solid fa-circle-exclamation"></i>
                     Apenas letras minúsculas sem acentuação e sem caracteres especiais
                 </p>
                 <div>
-                    <button class="btn-encrypt">Criptografar</button>
-                    <button class="btn-decrypt">Descriptografar</button>
+                    <button id="encrypt-btn" class="dark-btn">Criptografar</button>
+                    <button id="decrypt-btn" class="light-btn">Descriptografar</button>
                 </div>
             </div>
         </div>
 
-        <div id="text-output">
-            <input type="text" name="display" id="display"
-                placeholder="Digite um texto que você deseja criptografar ou descriptografar" disabled>
-            <!-- <button class="btn-copy">Copiar</button> -->
+        <div class="text-output-container">
+            <img id="no-msg-img" src="assets/no-msg.png" alt="Nenhuma mensagem encontrada">
+            <textarea id="text-output" disabled></textarea>
         </div>
     </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/joice-gomes-dn/" target="_blank">LinkedIn</a>
-        <p>Desenvolvido por Joice Gomes | 2022</p>
-        <a href="https://github.com/Joi-GN" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/joice-gomes-dn/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+        </a>
+        <p>Desenvolvido por Joice Gomes &copy; 2022</p>
+        <a href="https://github.com/Joi-GN" target="_blank">
+            <i class="fa-brands fa-github-square"></i>
+            Github
+        </a>
     </footer>
 </body>
 
