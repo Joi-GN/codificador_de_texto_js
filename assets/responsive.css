@@ -1,0 +1,73 @@
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+    .buttons-container{
+        text-align: start;
+    }
+
+    .buttons-container button{
+        width: 49.5%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        height: 100vh;
+    }
+
+    main{
+        flex-direction: row;
+        height: 90%;
+        width: 100%;
+    }
+
+    #logo {
+        width: 10%;
+    }
+
+    #encryptor {
+        height: 100%;
+        width: 65%;
+    }
+
+    .title{
+        text-align: start;
+    }
+
+    .text-input-container {
+        height: 60%;
+    }
+
+    #text-input{
+        height: 100%;
+        width: 95%;
+        overflow: auto;
+    }
+
+    .buttons-container button{
+        margin: 1em 1em 0 0;
+        width: 40%;
+    }
+
+    .text-output-container{
+        height: 100%;
+        width: 25%;
+    }
+
+    #text-output{
+        height: 90%;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .text-output-container img{
+        height: auto;
+        width: 100%;
+    }
+
+    footer{
+        gap: 3em;
+        justify-content: center;
+        height: 10%;
+    }
+}

@@ -11,11 +11,11 @@ encryptButton.onclick = encryptText;
 decryptButton.onclick = decryptText;
 
 function encryptText() {
-    let text = input.value.toLowerCase();
+    let text = input.innerText.toLowerCase();
     let textArray = text.split('');
     let result;
 
-    if (input.value === '') {
+    if (input.innerText === '') {
         input.placeholder = 'Digite um texto primeiro!';
     } else {
         for (let i = 0; i < textArray.length; i++) {
@@ -33,21 +33,21 @@ function encryptText() {
         }
         result = textArray.join('');
         noMsgImg.style.display = 'none';
-        output.value = result;
+        output.innerText = result;
         createCopyButton();
     }
 }
 
 function decryptText() {
-    let text = input.value.toLowerCase();
+    let text = input.innerText.toLowerCase();
     let result;
 
-    if (input.value === '') {
+    if (input.innerText === '') {
         input.placeholder = 'Digite um texto primeiro!';
     } else {
         result = text.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
         noMsgImg.style.display = 'none';
-        output.value = result;
+        output.innerText = result;
         createCopyButton();
     }
 }
@@ -66,6 +66,6 @@ function createCopyButton() {
 }
 
 async function copyToClipboard(){
-    await navigator.clipboard.writeText(output.value);
+    await navigator.clipboard.writeText(output.innerText);
     alert('Texto copiado para a área de transferência.');
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/responsive.css">
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
 
     <script defer src="assets/script.js"></script>
@@ -25,7 +26,7 @@
                 <h1 class="title">Codificador de Texto</h1>
             </div>
             <div class="text-input-container">
-                <textarea id="text-input" placeholder="Digite seu texto aqui" autofocus></textarea>
+                <span id="text-input" role="textbox" contenteditable></span>
             </div>
             <div class="buttons-container">
                 <p class="notice">
@@ -41,7 +42,7 @@
 
         <div class="text-output-container">
             <img id="no-msg-img" src="assets/no-msg.png" alt="Nenhuma mensagem encontrada">
-            <textarea id="text-output" disabled></textarea>
+            <span id="text-output" role="textbox" contenteditable="false"></span>
         </div>
     </main>
 

@@ -4,7 +4,9 @@ Projeto desenvolvido para o 1º Alura Challenge do programa Oracle Next Educatio
 
 O challenge consiste em contruir um decodificador de texto com JavaScript.
 
-![](screenshot.png)
+![]()
+
+### <center> Acesse o site clicando [aqui](https://joi-gn.github.io/codificador_de_texto_js/)
 
 ## O que foi utilizado
 Para estruturar o site foi utilizado HTML, para estilizar, CSS. E JavaScript foi utilizado para a parte interativa do site.

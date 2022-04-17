@@ -2,12 +2,12 @@
 
 /* Variables */
 :root {
-    --bg-color: #f1f1f1;
-    --color: #ff5b3e;
-    --lcolor: #ff8974;
-    --dcolor: #ff5b3e9c;
+    --bg-color: floralwhite;
+    --color: orchid;
+    --lcolor: plum;
+    --dcolor: mediumorchid;
     --text-color: #323232;
-    --btn-bg: #f1f1f1;
+    --btn-bg: floralwhite;
 }
 
 /* General */
@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--text-color);
     font-family: 'Inter', sans-serif;
     text-decoration: none;
 }
@@ -26,65 +25,64 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 
 main {
     display: flex;
-    margin: 25px 10px 0 10px;
-    height: 90%;
+    flex-direction: column;
+    color: var(--text-color);
+    padding: 2em;
+    height: 100%;
     width: 100%;
-}
-
-#logo {
-    width: 10%;
 }
 
 #logo i{
     color: var(--color);
-    margin-left: 0.5em;
     font-size: 4em;
 }
 
 /* Encryptor */
 
 #encryptor {
-    height: 100%;
-    width: 60%;
+    margin-top: 0.5em;
+    text-align: center;
+    width: 100%;
 }
 
 .title {
     color: var(--color);
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 700;
 }
 
 .text-input-container {
-    height: 65%;
+    width: 100%;
+    margin-top: 1em;
 }
 
-.text-input-container textarea {
+#text-input {
     background-color: transparent;
-    border: 1px solid;
+    border: 1px solid var(--text-color);
     border-radius: 1em;
+    display: block;
     font-size: 1.5em;
-    margin: 1em 0;
-    padding: 1.5em 1em;
-    resize: none;
-    height: 85%;
-    width: 95%;
+    padding: 1.5em;
+    min-height: 12em;
+    width: 100%;
+    text-align: start;
 }
 
-::placeholder {
+#text-input[contenteditable]:empty::before {
+    content: "Digite aqui seu texto";
     color: var(--text-color);
 }
 
 .buttons-container {
     display: flex;
     flex-direction: column;
-    height: 20%;
+    margin: 1em 0;
 }
 
 .buttons-container p {
@@ -92,7 +90,8 @@ main {
 }
 
 .buttons-container button {
-    margin: 1em 1em 0 0;
+    margin-top: 1em;
+    width: 100%;
 }
 
 button {
@@ -102,56 +101,61 @@ button {
     font-size: 1em;
     font-weight: 300;
     padding: 1em 0em;
-    width: 13em;
 }
 
 button:hover {
-    background-color: var(--lcolor);
-    color: var(--text-color);
-    transition: 1s all;
+    background-color: var(--dcolor);
+    color: var(--bg-color);
+    transition: 1s;
+}
+
+button:active{
+    background-color: var(--bg-color);
 }
 
 .dark-btn {
     background-color: var(--color);
-    color: var(--btn-bg);
+    color: var(--bg-color);
 }
 
 .light-btn {
-    background-color: var(--btn-bg);
-    color: var(--color);
+    background-color: var(--bg-color);
+    color: var(--dcolor);
 }
 
 /* Text Output */
 
 .text-output-container {
-    background-color: var(--dcolor);
+    background-color: var(--lcolor);
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 95%;
-    width: 25%;
+    min-height: 10em;
+    width: 100%;
 }
 
 #text-output {
     border: none;
     background-color: transparent;
+    color: var(--text-color);
     font-size: 1.2em;
     padding: 2em;
     resize: none;
-    height: 90%;
+    word-wrap: break-word;
     width: 100%;
 }
 
 .text-output-container img{
     position: absolute;
-    width: 90%;
+    height: 90%;
 }
 
 .text-output-container button{
-    margin-bottom: 1em;
+    margin: 1em 0;
+    width: 70%;
 }
 
 /* Footer */
@@ -159,11 +163,17 @@ button:hover {
 footer {
     display: flex;
     background-color: var(--dcolor);
+    color: var(--bg-color);
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 1em;
-    gap: 50px;
-    height: 10%;
-    width: 100%;
+    gap: 3em;
     text-align: center;
+    padding: 1em;
+    height: 4em;
+    width: 100%;
+}
+
+footer a{
+    color: var(--bg-color);
 }
