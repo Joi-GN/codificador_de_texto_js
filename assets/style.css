@@ -2,12 +2,11 @@
 
 /* Variables */
 :root {
-    --bg-color: floralwhite;
+    --white-color: floralwhite;
     --color: orchid;
     --lcolor: plum;
     --dcolor: mediumorchid;
-    --text-color: #323232;
-    --btn-bg: floralwhite;
+    --black-color: #323232;
 }
 
 /* General */
@@ -21,7 +20,7 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +31,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    color: var(--text-color);
+    color: var(--black-color);
     padding: 2em;
     height: 100%;
     width: 100%;
@@ -64,7 +63,7 @@ main {
 
 #text-input {
     background-color: transparent;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--black-color);
     border-radius: 1em;
     display: block;
     font-size: 1.5em;
@@ -76,7 +75,7 @@ main {
 
 #text-input[contenteditable]:empty::before {
     content: "Digite aqui seu texto";
-    color: var(--text-color);
+    color: var(--black-color);
 }
 
 .buttons-container {
@@ -105,28 +104,28 @@ button {
 
 button:hover {
     background-color: var(--dcolor);
-    color: var(--bg-color);
+    color: var(--white-color);
     transition: 1s;
 }
 
 button:active{
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
 }
 
 .dark-btn {
     background-color: var(--color);
-    color: var(--bg-color);
+    color: var(--white-color);
 }
 
 .light-btn {
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
     color: var(--dcolor);
 }
 
 /* Text Output */
 
 .text-output-container {
-    background-color: var(--lcolor);
+    background-color: var(--dcolor);
     border-radius: 1em;
     display: flex;
     flex-direction: column;
@@ -140,7 +139,7 @@ button:active{
 #text-output {
     border: none;
     background-color: transparent;
-    color: var(--text-color);
+    color: var(--black-color);
     font-size: 1.2em;
     padding: 2em;
     resize: none;
@@ -162,8 +161,8 @@ button:active{
 
 footer {
     display: flex;
-    background-color: var(--dcolor);
-    color: var(--bg-color);
+    background-color: var(--lcolor);
+    color: var(--black-color);
     align-items: center;
     justify-content: space-evenly;
     font-size: 1em;
@@ -175,5 +174,5 @@ footer {
 }
 
 footer a{
-    color: var(--bg-color);
+    color: var(--black-color);
 }

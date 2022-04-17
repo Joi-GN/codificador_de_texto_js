@@ -1,12 +1,14 @@
 # Site Codificador/Decodificador de Texto
 
+![](screenshot.png)
+
 Projeto desenvolvido para o 1º Alura Challenge do programa Oracle Next Education | ONE.  
 
-O challenge consiste em contruir um decodificador de texto com JavaScript.
+O challenge consiste em contruir um codificador de texto com JavaScript.
 
-![]()
+![](gif.gif)
 
-### <center> Acesse o site clicando [aqui](https://joi-gn.github.io/codificador_de_texto_js/)
+### Acesse o site clicando [aqui](https://joi-gn.github.io/codificador_de_texto_js/)
 
 ## O que foi utilizado
 Para estruturar o site foi utilizado HTML, para estilizar, CSS. E JavaScript foi utilizado para a parte interativa do site.
@@ -18,4 +20,4 @@ Também para dar interatividade com os botões, utilizei eventos como onclick pa
 Para a lógica das funções, foi utilizado métodos dos arrays e strings, condicionais e estruturas de repetição.
 
 ## Responsividade
-Em construção
+![](gif-responsividade.gif)

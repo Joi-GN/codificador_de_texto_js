@@ -16,7 +16,7 @@ function encryptText() {
     let result;
 
     if (input.innerText === '') {
-        input.placeholder = 'Digite um texto primeiro!';
+        alert('Digite um texto primeiro!');
     } else {
         for (let i = 0; i < textArray.length; i++) {
             if (textArray[i] === 'a') {
@@ -43,7 +43,7 @@ function decryptText() {
     let result;
 
     if (input.innerText === '') {
-        input.placeholder = 'Digite um texto primeiro!';
+        alert('Digite um texto primeiro!');
     } else {
         result = text.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
         noMsgImg.style.display = 'none';
