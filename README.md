@@ -1,10 +1,10 @@
 # Site Codificador/Decodificador de Texto
 
-![](screenshot.png)
-
 Projeto desenvolvido para o 1º Alura Challenge do programa Oracle Next Education | ONE.  
 
 O challenge consiste em contruir um codificador de texto com JavaScript.
+
+![](screenshot.png)
 
 ![](gif.gif)
 
