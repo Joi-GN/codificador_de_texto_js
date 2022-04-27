@@ -5,7 +5,7 @@ const input = document.getElementById('text-input');
 const output = document.getElementById('text-output');
 const encryptButton = document.getElementById('encrypt-btn');
 const decryptButton = document.getElementById('decrypt-btn');
-const noMsgImg = document.getElementById('no-msg-img');
+const noMsgFound= document.getElementById('no-msg-found');
 
 encryptButton.onclick = encryptText;
 decryptButton.onclick = decryptText;
@@ -32,7 +32,7 @@ function encryptText() {
             }
         }
         result = textArray.join('');
-        noMsgImg.style.display = 'none';
+        noMsgFound.style.display = 'none';
         output.innerText = result;
         createCopyButton();
     }
@@ -46,7 +46,7 @@ function decryptText() {
         alert('Digite um texto primeiro!');
     } else {
         result = text.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
-        noMsgImg.style.display = 'none';
+        noMsgFound.style.display = 'none';
         output.innerText = result;
         createCopyButton();
     }
