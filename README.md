@@ -6,8 +6,6 @@ O challenge consiste em construir um codificador de texto com JavaScript.
 
 ## Acesse o site clicando [aqui!](https://joi-gn.github.io/codificador_de_texto_js/)
 
-## Acesse o site clicando [aqui!](https://joi-gn.github.io/codificador_de_texto_js/)
-
 ![](screenshot.png)
 
 ![](gif.gif)
