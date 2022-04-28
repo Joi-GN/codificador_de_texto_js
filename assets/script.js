@@ -5,10 +5,12 @@ const input = document.getElementById('text-input');
 const output = document.getElementById('text-output');
 const encryptButton = document.getElementById('encrypt-btn');
 const decryptButton = document.getElementById('decrypt-btn');
-const noMsgFound= document.getElementById('no-msg-found');
+const noMsgFound = document.getElementById('no-msg-found');
+const modal = document.getElementById('modal');
+const modalText = document.getElementById('modal-text');
 
-encryptButton.onclick = encryptText;
-decryptButton.onclick = decryptText;
+encryptButton.addEventListener('click', encryptText);
+decryptButton.addEventListener('click', decryptText);
 
 function encryptText() {
     let text = input.innerText.toLowerCase();
@@ -16,7 +18,8 @@ function encryptText() {
     let result;
 
     if (input.innerText === '') {
-        alert('Digite um texto primeiro!');
+        modalText.textContent = 'Digite um texto primeiro!';
+        showOrHideModal();
     } else {
         for (let i = 0; i < textArray.length; i++) {
             if (textArray[i] === 'a') {
@@ -32,9 +35,7 @@ function encryptText() {
             }
         }
         result = textArray.join('');
-        noMsgFound.style.display = 'none';
-        output.innerText = result;
-        createCopyButton();
+        showOutputText(result);
     }
 }
 
@@ -43,13 +44,18 @@ function decryptText() {
     let result;
 
     if (input.innerText === '') {
-        alert('Digite um texto primeiro!');
+        modalText.textContent = 'Digite um texto primeiro!';
+        showOrHideModal();
     } else {
         result = text.replace(/ai/g, 'a').replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ufat/g, 'u');
-        noMsgFound.style.display = 'none';
-        output.innerText = result;
-        createCopyButton();
+        showOutputText(result);
     }
+}
+
+function showOutputText(result) {
+    noMsgFound.style.display = 'none';
+    output.innerText = result;
+    createCopyButton();
 }
 
 function createCopyButton() {
@@ -65,7 +71,15 @@ function createCopyButton() {
     }
 }
 
-async function copyToClipboard(){
+async function copyToClipboard() {
     await navigator.clipboard.writeText(output.innerText);
-    alert('Texto copiado para a área de transferência.');
+    modalText.textContent = 'Texto copiado para a área de transferência.';
+    showOrHideModal();
+}
+
+const closeModalBtn = document.getElementById('close-btn');
+closeModalBtn.addEventListener('click', showOrHideModal);
+
+function showOrHideModal(){
+    modal.classList.toggle('hidden');
 }

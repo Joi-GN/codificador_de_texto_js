@@ -133,8 +133,22 @@ button:active{
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 10em;
+    min-height: 14em;
     width: 100%;
+}
+
+#no-msg-found{
+    position: absolute;
+    text-align: center;
+}
+
+#no-msg-found img{
+    width: 50%;
+}
+
+#no-msg-found p{
+    margin-top: 1em;
+    font-size: 0.8em;
 }
 
 #text-output {
@@ -148,20 +162,46 @@ button:active{
     width: 100%;
 }
 
-#no-msg-found{
-    position: absolute;
-    padding: 1em;
-    text-align: center;
-}
-
-#no-msg-found p{
-    margin-top: 1em;
-    font-size: 0.8em;
-}
-
 .text-output-container button{
     margin: 1em 0;
     width: 70%;
+}
+
+/* Modal */
+
+#modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);  
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    border: 1px solid #888;
+    border-radius: 1em;
+    font-size: 1em;
+    padding: 45px 10px;
+    width: 50%;
+    text-align: center;
+}
+
+#close-btn{
+    font-size: 0.8em;
+    margin-top: 1em;
+    width: 40%;
+}
+
+#close-btn:hover{
+    opacity: 0.5;
 }
 
 /* Footer */

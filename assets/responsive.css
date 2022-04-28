@@ -54,15 +54,26 @@
         width: 22%;
     }
 
+    #no-msg-found{
+        width: 80%;
+    }
+
+    #no-msg-found img{
+        width: 90%;
+    }
+
     #text-output{
         height: 90%;
         width: 100%;
         overflow: auto;
     }
 
-    .text-output-container img{
-        height: auto;
-        width: 100%;
+    .modal-content{
+        width: 40%;
+    }
+
+    #close-btn{
+        width: 25%;
     }
 
     footer{
